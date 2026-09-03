@@ -1,23 +1,63 @@
 ---
-layout: posts
+layout: default
 ---
-        {% for post in paginator.posts %}
-        <li>
-            <time>{{ post.date | date_to_string }}</time>
-            <h3>{% if page.link %}<a href="{{ post.link }}">{{ post.title }}</a> *{% else %}<a href="{{ post.url }}">{{ post.title }}</a>{% endif %}</h3>
-        </li>
-        {% endfor %}
-    </ul>
-</article>
 
-{% if paginator.total_pages > 1 %}
-<div class="paginator">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="newer">Back</a>
-  {% endif %}
+<div class="intro">
+  <p>I'm a software developer living near Lisbon, Portugal. Mostly Python, Rust and TypeScript.</p>
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next</a>
-  {% endif %}
+  <p>For the last two years most of what I build is tooling for AI coding agents. The agents run in
+  the terminal, and the terminal is a bad place to watch them from. Hard to see what several agents
+  are doing at once, and close to impossible from a phone. Most of the projects below are some angle
+  on that.</p>
+
+  <p>Before that I worked mostly on Python backends and data pipelines, at
+  <a href="https://www.checkpoint.com/">Check Point</a> and at BreezoMeter, which is now part of Google.</p>
+
+  <p>Currently looking for remote work, part time or full time.
+  <a href="mailto:eyalev@gmail.com">eyalev@gmail.com</a>.</p>
+</div>
+
+{% for g in site.data.projects %}
+<h2>{{ g.group }}</h2>
+<div class="stack">
+  {% for p in g.items %}
+  <div>
+    <div class="rows">
+      <div class="t"><a href="{{ p.url }}">{{ p.name }}</a></div>
+      <div class="meta">{{ p.meta }}</div>
+    </div>
+    <div class="d">{{ p.desc }}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
+
+{% if site.posts.size > 0 %}
+<h2><a href="/writing/">writing</a></h2>
+<div class="rows">
+  {% for post in site.posts limit: 6 %}
+  <div class="t"><a href="{{ post.url }}">{{ post.title }}</a></div>
+  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if site.notes.size > 0 %}
+<h2><a href="/notes/">notes</a></h2>
+<div class="rows">
+  {% for n in site.notes limit: 6 %}
+  <div class="t"><a href="{{ n.url }}">{{ n.title }}</a></div>
+  <time>{{ n.date | date: "%Y-%m-%d" }}</time>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if site.data.reading.size > 0 %}
+<h2><a href="/reading/">reading</a></h2>
+<div class="rows">
+  {% for b in site.data.reading limit: 6 %}
+  <div class="t">{% if b.url %}<a href="{{ b.url }}">{{ b.title }}</a>{% else %}{{ b.title }}{% endif %}</div>
+  <div class="meta">{{ b.author }}</div>
+  {% endfor %}
 </div>
 {% endif %}

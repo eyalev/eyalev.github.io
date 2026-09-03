@@ -1,0 +1,29 @@
+---
+layout: default
+title: Reading
+section: reading
+permalink: /reading/
+---
+<h1>reading</h1>
+
+<p>Books I've read and would hand to someone else. This list is short because I only
+started keeping it recently, not because I only read three books.</p>
+
+<div class="rows">
+  {% for b in site.data.reading %}
+  <div class="t">{% if b.url %}<a href="{{ b.url }}">{{ b.title }}</a>{% else %}{{ b.title }}{% endif %}</div>
+  <div class="meta">{{ b.author }}</div>
+  {% endfor %}
+</div>
+
+<h2>elsewhere</h2>
+<div class="stack">
+  <div>
+    <div class="rows"><div class="t"><a href="https://github.com/eyalev/awesome-reading-lists">awesome-reading-lists</a></div><div class="meta">list</div></div>
+    <div class="d">Other people's reading lists, collected. Better signal than any recommendation engine I've used.</div>
+  </div>
+  <div>
+    <div class="rows"><div class="t"><a href="https://readsfrom.kapps.dev">readsfrom</a></div><div class="meta">web app</div></div>
+    <div class="d">Book recommendations pulled from public posts, with the quote and the source kept attached.</div>
+  </div>
+</div>

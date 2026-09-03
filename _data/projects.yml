@@ -1,0 +1,44 @@
+- group: agent tooling
+  items:
+    - name: ttyview
+      url: https://github.com/ttyview/ttyview
+      meta: Rust
+      desc: Watch tmux sessions from a browser. Sends a cell grid instead of running a terminal emulator client side, which is what makes it work on a phone.
+    - name: mobile-cc
+      url: https://github.com/eyalev/mobile-cc
+      meta: Rust
+      desc: The same idea packaged for one job, driving Claude Code from a phone.
+    - name: herdr-web
+      url: https://github.com/eyalev/herdr-web
+      meta: TypeScript
+      desc: Mobile web UI for the herdr agent multiplexer. Agent state at a glance, so you notice the one waiting on you.
+    - name: cc-usage-json
+      url: https://github.com/eyalev/cc-usage-json
+      meta: Rust
+      desc: Claude Code usage as JSON you can script against, either over OAuth or by scraping the TUI.
+    - name: claude-code-manager
+      url: https://github.com/eyalev/claude-code-manager
+      meta: Rust
+      desc: Manage Claude Code sessions through tmux. Send messages, detect when a run is done.
+
+- group: language learning
+  items:
+    - name: pt-variant
+      url: https://github.com/eyalev/pt-variant
+      meta: Python
+      desc: Tells you if a YouTube video is European or Brazilian Portuguese, from the transcript. CLI, web app and API.
+    - name: language-learning-resources
+      url: https://github.com/eyalev/language-learning-resources
+      meta: open data
+      desc: 800+ resources across 30+ languages as JSON and CSV, with honest notes on each one.
+
+- group: other
+  items:
+    - name: awesome-reading-lists
+      url: https://github.com/eyalev/awesome-reading-lists
+      meta: list
+      desc: Reading lists from people worth reading. Bookshelves instead of an algorithm.
+    - name: gitbox
+      url: https://github.com/eyalev/gitbox
+      meta: Rust
+      desc: Sync files between computers with git and GitHub, without thinking about git.

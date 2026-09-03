@@ -1,0 +1,150 @@
+:root {
+  color-scheme: light dark;
+  --bg:        light-dark(#fdfdfc, #16161a);
+  --text:      light-dark(#1a1a1a, #d6d6d2);
+  --dim:       light-dark(#6b6b66, #85857e);
+  --rule:      light-dark(#e2e2dd, #2c2c31);
+  --link:      light-dark(#1a1a1a, #d6d6d2);
+  --accent:    light-dark(#a33b12, #e08a5a);
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 22px 90px;
+}
+
+/* ---- header ---- */
+
+header.site {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 18px;
+  padding: 42px 0 30px;
+}
+
+header.site .name {
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+header.site nav {
+  font-family: var(--mono);
+  font-size: 13.5px;
+  display: flex;
+  gap: 16px;
+}
+
+header.site nav a { color: var(--dim); text-decoration: none; }
+header.site nav a:hover,
+header.site nav a[aria-current] { color: var(--accent); }
+
+/* ---- text ---- */
+
+a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--accent); }
+
+p { margin: 0 0 1.15em; }
+
+.intro p:first-child { margin-top: 0; }
+.intro { margin-bottom: 8px; }
+
+h1 {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 22px;
+}
+
+h2 {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin: 46px 0 14px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--rule);
+}
+
+h2 a { color: inherit; text-decoration: none; }
+h2 a:hover { color: var(--accent); }
+
+h3 { font-size: 17px; margin: 1.8em 0 0.4em; }
+
+article h1 { font-size: 26px; font-family: var(--sans); letter-spacing: -0.015em; margin-bottom: 6px; }
+article .date { font-family: var(--mono); font-size: 13px; color: var(--dim); display: block; margin-bottom: 30px; }
+
+blockquote { margin: 1.5em 0; padding-left: 18px; border-left: 2px solid var(--rule); color: var(--dim); }
+code { font-family: var(--mono); font-size: 0.88em; }
+pre { overflow-x: auto; padding: 14px 16px; background: light-dark(#f4f4f1, #1e1e23); border-radius: 4px; }
+pre code { font-size: 13px; }
+img { max-width: 100%; height: auto; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 40px 0; }
+
+/* ---- lists of things ---- */
+
+.rows { display: grid; grid-template-columns: 1fr auto; gap: 2px 20px; }
+.rows .t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rows time,
+.rows .meta {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--dim);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.stack > div { padding: 13px 0; border-bottom: 1px solid var(--rule); }
+.stack > div:last-child { border-bottom: 0; }
+.stack .t { font-weight: 500; }
+.stack .d { color: var(--dim); font-size: 15px; }
+.stack .d a { color: var(--dim); }
+
+.empty { color: var(--dim); font-size: 15px; }
+
+footer.site {
+  margin-top: 60px;
+  padding-top: 18px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--dim);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+footer.site a { color: var(--dim); text-decoration: none; }
+footer.site a:hover { color: var(--accent); }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .wrap { padding: 0 18px 60px; }
+  header.site { padding: 28px 0 22px; }
+  .rows { grid-template-columns: 1fr; gap: 0; }
+  .rows .t { white-space: normal; }
+  .rows time, .rows .meta { padding-bottom: 12px; }
+}
