@@ -42,22 +42,4 @@ layout: default
 </div>
 {% endif %}
 
-{% if site.notes.size > 0 %}
-<h2><a href="/notes/">notes</a></h2>
-<div class="rows">
-  {% for n in site.notes limit: 6 %}
-  <div class="t"><a href="{{ n.url }}">{{ n.title }}</a></div>
-  <time>{{ n.date | date: "%Y-%m-%d" }}</time>
-  {% endfor %}
-</div>
-{% endif %}
 
-{% if site.data.reading.size > 0 %}
-<h2><a href="/reading/">reading</a></h2>
-<div class="rows">
-  {% for b in site.data.reading limit: 6 %}
-  <div class="t">{% if b.url %}<a href="{{ b.url }}">{{ b.title }}</a>{% else %}{{ b.title }}{% endif %}</div>
-  <div class="meta">{{ b.author }}</div>
-  {% endfor %}
-</div>
-{% endif %}

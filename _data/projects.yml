@@ -42,3 +42,7 @@
       url: https://github.com/eyalev/gitbox
       meta: Rust
       desc: Sync files between computers with git and GitHub, without thinking about git.
+    - name: readsfrom
+      url: https://readsfrom.kapps.dev
+      meta: web app
+      desc: Book recommendations pulled from public posts, with the quote and the source kept attached.
