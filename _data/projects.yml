@@ -9,7 +9,7 @@
       meta: web app
       desc: One page per public figure. Where they actually publish, and what they are on record saying, in their own words.
     - name: rcmnd
-      url: https://readsfrom.kapps.dev
+      url: https://rcmnd.app
       meta: web app
       desc: Books, tools and hardware recommended by named people, every entry traced back to the public post where they said it.
     - name: reachdex
@@ -28,7 +28,7 @@
       meta: web app
       desc: Turns native podcasts into listening practice. Real audio, word by word translation, and sentence by sentence playback at full speed.
     - name: How to Learn
-      url: https://langstack.kapps.dev
+      url: https://howtolearn.app
       meta: web app
       desc: A filterable directory of the best resources for learning any language. Apps, podcasts, channels, courses, books and communities.
     - name: pt-variant
