@@ -5,10 +5,12 @@ layout: default
 <div class="intro">
   <p>I'm a software developer living near Lisbon, Portugal. Mostly Python, Rust and TypeScript.</p>
 
-  <p>For the last two years most of what I build is tooling for AI coding agents. The agents run in
-  the terminal, and the terminal is a bad place to watch them from. Hard to see what several agents
-  are doing at once, and close to impossible from a phone. Most of the projects below are some angle
-  on that.</p>
+  <p>Most of what I build pulls information out of a lot of scattered sources and keeps it usable
+  and attributed: who said what and where you can check it, what is worth using to learn a language,
+  what is on in Portugal this week.</p>
+
+  <p>The rest is tooling for AI coding agents. That started because I was running several at once
+  and could not tell what any of them were doing without walking back to my desk.</p>
 
   <p>Before that I worked mostly on Python backends and data pipelines, at
   <a href="https://www.checkpoint.com/">Check Point</a> and at BreezoMeter, which is now part of Google.</p>
@@ -31,15 +33,3 @@ layout: default
   {% endfor %}
 </div>
 {% endfor %}
-
-{% if site.posts.size > 0 %}
-<h2><a href="/writing/">writing</a></h2>
-<div class="rows">
-  {% for post in site.posts limit: 6 %}
-  <div class="t"><a href="{{ post.url }}">{{ post.title }}</a></div>
-  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-  {% endfor %}
-</div>
-{% endif %}
-
-

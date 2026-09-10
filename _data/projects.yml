@@ -1,3 +1,64 @@
+- group: sourced information
+  items:
+    - name: korrents
+      url: https://korrents.com
+      meta: web app
+      desc: A public belief journal. What people currently believe, when they said it, and what changed their minds.
+    - name: ppll
+      url: https://ppll.app
+      meta: web app
+      desc: One page per public figure. Where they actually publish, and what they are on record saying, in their own words.
+    - name: rcmnd
+      url: https://readsfrom.kapps.dev
+      meta: web app
+      desc: Books, tools and hardware recommended by named people, every entry traced back to the public post where they said it.
+    - name: reachdex
+      url: https://reachdex.kapps.dev
+      meta: web app
+      desc: A curated index of how to actually reach people, organizations and projects, and which of their channels are dead.
+    - name: whosaid
+      url: https://whosaid.kapps.dev
+      meta: web app
+      desc: Speaker-attributed transcripts of podcasts and interviews, with timestamps.
+
+- group: language learning
+  items:
+    - name: Lingush
+      url: https://lingush.com
+      meta: web app
+      desc: Turns native podcasts into listening practice. Real audio, word by word translation, and sentence by sentence playback at full speed.
+    - name: How to Learn
+      url: https://langstack.kapps.dev
+      meta: web app
+      desc: A filterable directory of the best resources for learning any language. Apps, podcasts, channels, courses, books and communities.
+    - name: pt-variant
+      url: https://github.com/eyalev/pt-variant
+      meta: Python
+      desc: Tells you if a YouTube video is European or Brazilian Portuguese, from the transcript. CLI, web app and API.
+    - name: language-learning-resources
+      url: https://github.com/eyalev/language-learning-resources
+      meta: open data
+      desc: 800+ resources across 30+ languages as JSON and CSV, with honest notes on each one.
+
+- group: tools
+  items:
+    - name: Readable PDF
+      url: https://pdf.kapps.dev
+      meta: web app
+      desc: Turn any PDF into a clean web page you can actually read.
+    - name: Agenda PT
+      url: https://agenda.kapps.dev
+      meta: web app
+      desc: Every event in Portugal, searchable by date, category, city and map.
+    - name: Ping
+      url: https://ping.kapps.dev
+      meta: web app
+      desc: Type a city, see whether it is a reasonable hour to message someone there.
+    - name: gitbox
+      url: https://github.com/eyalev/gitbox
+      meta: Rust
+      desc: Sync files between computers with git and GitHub, without thinking about git.
+
 - group: agent tooling
   items:
     - name: ttyview
@@ -21,28 +82,9 @@
       meta: Rust
       desc: Manage Claude Code sessions through tmux. Send messages, detect when a run is done.
 
-- group: language learning
-  items:
-    - name: pt-variant
-      url: https://github.com/eyalev/pt-variant
-      meta: Python
-      desc: Tells you if a YouTube video is European or Brazilian Portuguese, from the transcript. CLI, web app and API.
-    - name: language-learning-resources
-      url: https://github.com/eyalev/language-learning-resources
-      meta: open data
-      desc: 800+ resources across 30+ languages as JSON and CSV, with honest notes on each one.
-
 - group: other
   items:
     - name: awesome-reading-lists
       url: https://github.com/eyalev/awesome-reading-lists
       meta: list
       desc: Reading lists from people worth reading. Bookshelves instead of an algorithm.
-    - name: gitbox
-      url: https://github.com/eyalev/gitbox
-      meta: Rust
-      desc: Sync files between computers with git and GitHub, without thinking about git.
-    - name: readsfrom
-      url: https://readsfrom.kapps.dev
-      meta: web app
-      desc: Book recommendations pulled from public posts, with the quote and the source kept attached.
