@@ -1,0 +1,29 @@
+---
+layout: default
+title: Projects
+section: projects
+permalink: /projects/
+description: Things Eyal Levin has built. Sourced-information sites, places, listening, language learning and tooling for AI coding agents.
+---
+{% assign count = 0 %}{% for g in site.data.projects %}{% assign count = count | plus: g.items.size %}{% endfor %}
+<h1>Projects</h1>
+<p class="lede">{{ count }} things, most of them live. The web apps are free and work on a phone.</p>
+
+<nav class="jump" aria-label="Groups">
+  {% for g in site.data.projects %}<a href="#{{ g.group | slugify }}">{{ g.group }}</a>{% endfor %}
+</nav>
+
+{% for g in site.data.projects %}
+<section class="group" id="{{ g.group | slugify }}">
+  <h2>{{ g.group }} <span class="count">{{ g.items.size }}</span></h2>
+  <ul class="projects">
+    {% for p in g.items %}
+    <li>
+      <a class="p-name" href="{{ p.url }}">{{ p.name }}</a>
+      <span class="p-meta">{{ p.meta }}</span>
+      <p class="p-desc">{{ p.desc }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}

@@ -1,4 +1,4 @@
-- group: sourced information
+- group: Sourced information
   items:
     - name: korrents
       url: https://korrents.com
@@ -12,6 +12,18 @@
       url: https://rcmnd.app
       meta: web app
       desc: Books, tools and hardware recommended by named people, every entry traced back to the public post where they said it.
+    - name: niuz
+      url: https://niuz.app
+      meta: web app
+      desc: The news reduced to the points that matter, and which outlets report each one.
+    - name: wiqqi
+      url: https://wiqqi.app
+      meta: web app
+      desc: A wiki of organizations, podcasts, people and events. What each one is, who is behind it, and where every fact comes from.
+    - name: ybooks
+      url: https://ybooks.app
+      meta: web app
+      desc: The case for reading books. The evidence with its caveats, quotes from notable readers, and what named people are reading now.
     - name: reachdex
       url: https://reachdex.kapps.dev
       meta: web app
@@ -21,16 +33,62 @@
       meta: web app
       desc: Speaker-attributed transcripts of podcasts and interviews, with timestamps.
 
-- group: language learning
+- group: Places
   items:
-    - name: Lingush
-      url: https://lingush.com
+    - name: loqation
+      url: https://loqation.app
       meta: web app
-      desc: Turns native podcasts into listening practice. Real audio, word by word translation, and sentence by sentence playback at full speed.
+      desc: Every town on earth, one page each. 34,000 places with their weather, air quality, events and what is nearby.
+    - name: Agenda PT
+      url: https://agenda.kapps.dev
+      meta: web app
+      desc: Every event in Portugal, searchable by date, category, city and map.
+    - name: airhome
+      url: https://airhome.kapps.dev
+      meta: web app
+      desc: Type a Portuguese address and see what you would be breathing there, from the nearest official monitors.
+    - name: produqt
+      url: https://produqt.app
+      meta: web app
+      desc: The same product at Continente and Auchan, matched by barcode, with the nearest store of each chain.
+    - name: Prayer times
+      url: https://prayertimes.kapps.dev
+      meta: web app
+      desc: Prayer times for any city, without ads. The calculation method always shown, Qibla direction and a month table.
+    - name: Ping
+      url: https://ping.kapps.dev
+      meta: web app
+      desc: Type a city, see whether it is a reasonable hour to message someone there.
+
+- group: Listening
+  items:
+    - name: podqast
+      url: https://podqast.app
+      meta: web app
+      desc: Every episode of 550 podcasts in 29 languages, searchable by subject and by who is on them, with English notes under the originals.
+    - name: Global Radio
+      url: https://globalradio.app
+      meta: web app
+      desc: Eleven thousand live radio stations from 172 countries. Free, no signup.
+    - name: Audiobooks
+      url: https://audiobooks.kapps.dev
+      meta: web app
+      desc: Public-domain audiobooks from LibriVox, without the ads. Pick a book and press play.
+    - name: Sleep sounds
+      url: https://sleepsounds.kapps.dev
+      meta: web app
+      desc: Rain, ocean, fire and noise. Mix them, set a timer, and it keeps playing with the screen off.
+
+- group: Language learning
+  items:
     - name: How to Learn
       url: https://howtolearn.app
       meta: web app
       desc: A filterable directory of the best resources for learning any language. Apps, podcasts, channels, courses, books and communities.
+    - name: Lingush
+      url: https://podqast.app/portuguese/for-learners
+      meta: web app
+      desc: Native Portuguese podcasts as listening practice. Now part of podqast.
     - name: pt-variant
       url: https://github.com/eyalev/pt-variant
       meta: Python
@@ -40,26 +98,26 @@
       meta: open data
       desc: 800+ resources across 30+ languages as JSON and CSV, with honest notes on each one.
 
-- group: tools
+- group: Tools
   items:
+    - name: CodeSpeek
+      url: https://codespeek.com
+      meta: web app
+      desc: Practise coding interviews out loud. You describe the code, an AI interviewer writes exactly what you said and asks follow-ups.
     - name: Readable PDF
       url: https://pdf.kapps.dev
       meta: web app
       desc: Turn any PDF into a clean web page you can actually read.
-    - name: Agenda PT
-      url: https://agenda.kapps.dev
+    - name: WishWiki
+      url: https://wishwiki.com
       meta: web app
-      desc: Every event in Portugal, searchable by date, category, city and map.
-    - name: Ping
-      url: https://ping.kapps.dev
-      meta: web app
-      desc: Type a city, see whether it is a reasonable hour to message someone there.
+      desc: A wiki where pages come into existence when you wish for them.
     - name: gitbox
       url: https://github.com/eyalev/gitbox
       meta: Rust
       desc: Sync files between computers with git and GitHub, without thinking about git.
 
-- group: agent tooling
+- group: Agent tooling
   items:
     - name: ttyview
       url: https://github.com/ttyview/ttyview
@@ -82,7 +140,7 @@
       meta: Rust
       desc: Manage Claude Code sessions through tmux. Send messages, detect when a run is done.
 
-- group: other
+- group: Other
   items:
     - name: awesome-reading-lists
       url: https://github.com/eyalev/awesome-reading-lists

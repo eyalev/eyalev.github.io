@@ -1,31 +1,28 @@
 ---
 layout: default
+home: true
 ---
+{% assign count = 0 %}{% for g in site.data.projects %}{% assign count = count | plus: g.items.size %}{% endfor %}
+<section class="hello">
+  <h1 class="hello-name">Eyal Levin</h1>
+  <p class="hello-line">Software developer near Lisbon. I build things that gather scattered information and keep it attributed, and tooling for AI coding agents.</p>
+</section>
 
-<div class="intro">
-  <p>Software developer near Lisbon, Portugal. Mostly Python, Rust and TypeScript.</p>
+<nav class="index" aria-label="Pages">
+  <a href="/projects/"><span class="index-name">Projects</span><span class="index-note">{{ count }} things I've built</span></a>
+  <a href="/about/"><span class="index-name">About</span><span class="index-note">Background and work</span></a>
+  <a href="mailto:hello@eyalev.com"><span class="index-name">Email</span><span class="index-note">hello@eyalev.com</span></a>
+  <a href="https://github.com/eyalev"><span class="index-name">GitHub</span><span class="index-note">eyalev</span></a>
+  <a href="https://www.linkedin.com/in/eyalev/"><span class="index-name">LinkedIn</span><span class="index-note">in/eyalev</span></a>
+</nav>
 
-  <p>Most of what I build collects information that is scattered across a lot of places and keeps
-  it attributed. The rest is tooling for AI coding agents.</p>
-
-  <p>Before that, Python backends and data pipelines at
-  <a href="https://www.checkpoint.com/">Check Point</a> and at BreezoMeter, now part of Google.</p>
-
-  <p>Looking for remote work, part time or full time.
-  <a href="mailto:hello@eyalev.com">hello@eyalev.com</a>.</p>
-</div>
-
-{% for g in site.data.projects %}
-<h2>{{ g.group }}</h2>
-<div class="stack">
-  {% for p in g.items %}
-  <div>
-    <div class="rows">
-      <div class="t"><a href="{{ p.url }}">{{ p.name }}</a></div>
-      <div class="meta">{{ p.meta }}</div>
-    </div>
-    <div class="d">{{ p.desc }}</div>
-  </div>
-  {% endfor %}
-</div>
-{% endfor %}
+<p class="clock">Open to remote work, part time or full time. It's <time id="lisbon-time">daytime</time> in Lisbon.</p>
+<script>
+  (function () {
+    var el = document.getElementById('lisbon-time');
+    function tick() {
+      el.textContent = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Lisbon' }).format(new Date());
+    }
+    tick(); setInterval(tick, 30000);
+  })();
+</script>

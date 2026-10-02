@@ -3,7 +3,8 @@ Source for https://eyalev.com
 Jekyll, built by GitHub Pages. No build step needed.
 
 - Blog post: add `_posts/YYYY-MM-DD-title.md` with `layout: post` and a `title`.
-- Project: add an entry to `_data/projects.yml`.
+- Project: add an entry to `_data/projects.yml`; it shows on `/projects/` (the home page only links there).
+- Design tokens and rules: `DESIGN.md`.
 
 Notes and reading were removed until there's content for them. To bring either back:
 add the page file, a nav link in `_layouts/default.html`, and for notes the

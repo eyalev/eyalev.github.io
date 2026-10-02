@@ -12,6 +12,7 @@ plugins:
 exclude:
   - README.md
   - CLAUDE.md
+  - DESIGN.md
   - Gemfile
   - Gemfile.lock
 
