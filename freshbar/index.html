@@ -1,0 +1,195 @@
+---
+layout: default
+title: Freshbar
+description: A word-sized gauge of age, built into a date, so you can see how recent something is, and how it compares to its neighbours, without reading.
+permalink: /freshbar/
+---
+<style>
+/* Page styles for /freshbar/. Every value is a token from /assets/style.css (see DESIGN.md). */
+.fb-def { font-family: var(--serif); font-size: 24px; line-height: 1.35; color: var(--text); margin: 0 0 var(--s6); text-wrap: pretty; }
+.fb-pair { display: grid; grid-template-columns: 1fr; gap: var(--s5); margin: var(--s5) 0 var(--s4); }
+@media (min-width: 900px) { .fb-pair { grid-template-columns: 1fr 1fr; gap: var(--s6); width: min(1000px, calc(100vw - 2 * var(--s6))); margin-left: 50%; transform: translateX(-50%); } }
+.fb-cap { font-size: 14px; color: var(--dim); margin: 0 0 var(--s2); }
+.fb-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.fb-list li { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: var(--s3); padding: var(--s3) 0; border-bottom: 1px solid var(--rule); min-width: 0; }
+.fb-list .t { font-size: 15px; line-height: 1.4; min-width: 0; overflow-wrap: anywhere; }
+.fb-list .d { font-size: 14px; color: var(--dim); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.fb-list fresh-bar { font-size: 14px; color: var(--dim); }
+@media (max-width: 899px) { .fb-list li:nth-child(n+6) { display: none; } }
+.fb-clock { display: flex; align-items: center; gap: var(--s3); margin: var(--s4) 0 0; font-size: 14px; color: var(--dim); }
+.fb-clock input { flex: 1; min-width: 0; accent-color: var(--accent); }
+.fb-clock output { min-width: 7.5em; text-align: right; color: var(--text); font-variant-numeric: tabular-nums; }
+
+.fb-anat { margin: var(--s5) 0 var(--s4); padding: var(--s6) var(--s4) var(--s5); background: var(--wash); overflow-x: auto; }
+.fb-big { font-size: clamp(26px, 8vw, 40px); color: var(--soft); --freshbar-height: 9px; --freshbar-gap: 6px; --freshbar-width: 9em; }
+.fb-big { margin-bottom: 0 !important; }
+.fb-scale { position: relative; height: 22px; width: calc(clamp(26px, 8vw, 40px) * 9); max-width: 100%; margin-top: var(--s3); font-size: 12px; color: var(--dim); }
+.fb-scale span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+.fb-scale span::before { content: ""; position: absolute; left: 50%; top: -9px; height: 6px; border-left: 1px solid var(--faint); }
+.fb-parts { margin: var(--s4) 0 0; display: grid; grid-template-columns: max-content 1fr; gap: var(--s2) var(--s4); font-size: 15px; }
+.fb-parts dt { font-weight: 500; }
+.fb-parts dd { margin: 0; color: var(--soft); }
+
+.fb-rules { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.fb-rules li { padding: var(--s3) 0; border-bottom: 1px solid var(--rule); }
+.fb-rules b { font-weight: 500; display: block; }
+.fb-rules span { color: var(--soft); font-size: 15px; }
+
+.fb-var { display: grid; grid-template-columns: 1fr; gap: var(--s4); margin: var(--s4) 0; }
+@media (min-width: 620px) { .fb-var { grid-template-columns: repeat(2, 1fr); } }
+.fb-var figure { margin: 0; padding: var(--s4); border: 1px solid var(--rule); }
+.fb-var figcaption { margin-top: var(--s3); font-size: 14px; color: var(--dim); }
+.fb-var .row { display: block; margin: var(--s2) 0; font-size: 14px; color: var(--soft); }
+fresh-bar.loud { --freshbar-height: 4px; --freshbar-fill: var(--accent); }
+
+.fb-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.fb-table th, .fb-table td { text-align: left; vertical-align: top; padding: var(--s2) var(--s3) var(--s2) 0; border-bottom: 1px solid var(--rule); }
+.fb-table th { font-weight: 500; color: var(--dim); }
+.fb-table code { white-space: nowrap; }
+.fb-scroll { overflow-x: auto; }
+.fb-note { font-size: 14px; color: var(--dim); }
+</style>
+<script type="module" src="/freshbar/fresh-bar.js"></script>
+
+<h1>Freshbar</h1>
+<p class="fb-def">A freshbar is a word-sized gauge of age, built into a date. It lets you see how recent something is, and how it compares to its neighbours, without reading.</p>
+
+<div class="fb-pair" id="demo">
+  <div>
+    <p class="fb-cap">With freshbars</p>
+    <ul class="fb-list" data-list="fresh"></ul>
+  </div>
+  <div>
+    <p class="fb-cap">The same list, dates only</p>
+    <ul class="fb-list" data-list="plain"></ul>
+  </div>
+</div>
+<label class="fb-clock" for="fb-t">Move time forward <input type="range" id="fb-t" min="0" max="1000" value="0"> <output id="fb-to" for="fb-t">today</output></label>
+
+<h2>The problem</h2>
+<p>Every list on the web has dates: episodes, posts, commits, messages, prices. To understand one, you read it, you work out how long ago that was, and then, to know whether it is new <em>for this list</em>, you read the others too.</p>
+<p>Relative dates like "3 weeks ago" save the arithmetic, but you still have to read every one to compare them. Length, on the other hand, you can compare at a glance, which is much of why a bar chart is quicker to read than a table of numbers. A freshbar gives each date a length, in a column, so the comparison happens before you read a word.</p>
+
+<h2>Anatomy</h2>
+<div class="fb-anat" aria-label="A freshbar, enlarged, with its scale">
+  <fresh-bar class="fb-big" id="fb-big" datetime="" style="display:block;width:9em">2 weeks ago</fresh-bar>
+  <div class="fb-scale" aria-hidden="true">
+    <span style="left:0">now</span><span style="left:20%">a day</span><span style="left:40%">a week</span><span style="left:60%">a month</span><span style="left:80%">a year</span><span style="left:100%">2 years</span>
+  </div>
+</div>
+<dl class="fb-parts">
+  <dt>Label</dt><dd>The date in words. It stays. The bar annotates the date, it never replaces it.</dd>
+  <dt>Channel</dt><dd>The track under the label, the same width for every date in a list.</dd>
+  <dt>Fill</dt><dd>How much of the channel has passed. It grows with age, from the left.</dd>
+  <dt>Scale</dt><dd>What a full channel means. The default is five equal sections: a day, a week, a month, a year, two years.</dd>
+</dl>
+
+<h2>The scale</h2>
+<p>The scale is the one real design decision. A linear scale over two years would leave everything from this week as an empty channel, and most lists are dense in the recent past. So each section gets the same length, and time is stretched within it: the first day takes a fifth of the channel, and so does the whole second year.</p>
+<p>The channel stays empty for the first five minutes and is full at two years. Inside each section the end of the fill keeps away from the boundary, so "more than a week, less than a month" never sits exactly on a line. When a list has a different rhythm, change the scale, not the idea: a news feed might use an hour, a day, a week, a month.</p>
+
+<h2>Principles</h2>
+<ul class="fb-rules">
+  <li><b>The date stays.</b> <span>The bar annotates the words. Without the words it is a progress bar with nothing to say.</span></li>
+  <li><b>One width per list.</b> <span>Comparison is the point, and it only works when every channel in the list is the same length and starts at the same x.</span></li>
+  <li><b>It grows with age.</b> <span>A bar that drains as it gets older reads as loading, or as a battery running out. Time passing fills it.</span></li>
+  <li><b>Part of the date, not beside it.</b> <span>A gauge next to a date reads as an icon. Under or behind the words, it reads as the date's own.</span></li>
+  <li><b>The words never sit on the gauge.</b> <span>Leave room between the label and the channel, so neither gets in the way of the other.</span></li>
+  <li><b>Quiet.</b> <span>It labels content; it must not compete with it. Use the page's own muted colours, no new ones.</span></li>
+  <li><b>It explains itself.</b> <span>The exact date is one tap away. On a phone there is no hover, so a tooltip alone is not enough.</span></li>
+  <li><b>No date, no bar.</b> <span>Never draw an empty channel to mean "unknown". An estimated date gets a striped fill.</span></li>
+</ul>
+
+<h2>When not to use one</h2>
+<p>A single date alone on a page has nothing to be compared with. Future dates need a different idea. Dense data tables, where the column is already sortable and scanned by number, rarely need it. And if the age of things does not matter to the reader, a freshbar is noise.</p>
+
+<h2>Choosing a scale</h2>
+<p>Pick the scale from how far apart the things in your list usually are, so the channels spread out instead of all looking full or empty.</p>
+<div class="fb-scroll">
+<table class="fb-table">
+  <tr><th>List</th><th><code>stops</code></th></tr>
+  <tr><td>Most feeds: posts, episodes, releases</td><td><code>1d 1w 1mo 1y 2y</code> (default)</td></tr>
+  <tr><td>News, chat, notifications</td><td><code>1h 6h 1d 1w</code></td></tr>
+  <tr><td>Archives, references, books</td><td><code>1mo 1y 5y 20y</code></td></tr>
+</table>
+</div>
+<p>Set <code>--freshbar-width</code> to the widest label your list can show, in your language. In right-to-left pages the channel fills from the right.</p>
+
+<h2>Variants</h2>
+<p>The same component, styled with CSS.</p>
+<div class="fb-var" data-list="variants">
+  <figure>
+    <span class="row"><fresh-bar data-ago="5"></fresh-bar></span>
+    <span class="row"><fresh-bar data-ago="80"></fresh-bar></span>
+    <span class="row"><fresh-bar data-ago="2000"></fresh-bar></span>
+    <figcaption>Channel. The default: quiet, under the words.</figcaption>
+  </figure>
+  <figure>
+    <span class="row"><fresh-bar class="loud" data-ago="5">2 Oct</fresh-bar></span>
+    <span class="row"><fresh-bar class="loud" data-ago="80">29 Sep</fresh-bar></span>
+    <span class="row"><fresh-bar class="loud" data-ago="2000">11 Jul</fresh-bar></span>
+    <figcaption>Your own words, an accent fill. For a page where age is the point.</figcaption>
+  </figure>
+</div>
+
+<h2>Use it</h2>
+<p>One file, no dependencies, works in any page or framework.</p>
+<pre><code>&lt;script type="module" src="https://eyalev.com/freshbar/fresh-bar.js"&gt;&lt;/script&gt;
+
+&lt;fresh-bar datetime="2026-09-12T08:00:00Z"&gt;&lt;/fresh-bar&gt;
+&lt;fresh-bar datetime="2026-09-12"&gt;12 Sep&lt;/fresh-bar&gt;</code></pre>
+<p>Empty, it writes the relative label itself ("3 weeks ago") and keeps it current. With your own words inside, it keeps them and adds the channel. Either way, tapping the date shows the exact date and time, a screen reader hears it, and it sits in a real <code>&lt;time&gt;</code> element.</p>
+
+<div class="fb-scroll">
+<table class="fb-table">
+  <tr><th>Attribute</th><th>Meaning</th></tr>
+  <tr><td><code>datetime</code></td><td>Required. An ISO date (<code>2026-09-12</code>, <code>2026-09-12T08:00:00Z</code>), or unix seconds as a bare number.</td></tr>
+  <tr><td><code>stops</code></td><td>The scale, shortest first. Default <code>1d 1w 1mo 1y 2y</code> (a day, a week, a month, a year, two years). Units: <code>min h d w mo y</code>.</td></tr>
+  <tr><td><code>now</code></td><td>Fix "now", for tests and screenshots.</td></tr>
+</table>
+</div>
+<p></p>
+<div class="fb-scroll">
+<table class="fb-table">
+  <tr><th>CSS property</th><th>Default</th><th>What it sets</th></tr>
+  <tr><td><code>--freshbar-width</code></td><td>7.4em</td><td>The one width for every bar in a list. Size it to your longest label.</td></tr>
+  <tr><td><code>--freshbar-height</code></td><td>3px</td><td>Channel thickness.</td></tr>
+  <tr><td><code>--freshbar-gap</code></td><td>2px</td><td>Space between the words and the channel.</td></tr>
+  <tr><td><code>--freshbar-fill</code></td><td>text colour, 55%</td><td>The part that has passed.</td></tr>
+  <tr><td><code>--freshbar-track</code></td><td>text colour, 15%</td><td>The rest of the channel.</td></tr>
+</table>
+</div>
+<p class="fb-note">For anything else, style <code>::part(label)</code>, <code>::part(channel)</code> and <code>::part(fill)</code>. The functions behind it, <code>fillFor</code> and <code>relativeLabel</code>, are exported too, for server-rendered pages. <a href="/freshbar/fresh-bar.js">Read the source</a> (MIT).</p>
+
+<h2>In use</h2>
+<p><a href="https://podqast.app">podqast</a>, a podcast player, shows a freshbar on every episode in its feeds, so a glance down the list says which episodes are new this week.</p>
+
+<h2>What is not known yet</h2>
+<p>That a freshbar makes lists faster to understand is a claim from first principles, not a measured result. A simple test is planned: the same list with and without freshbars, timing "which is newest?" and "is anything from this week?". If you try it on your own site, I would like to hear how it went: <a href="mailto:hello@eyalev.com">hello@eyalev.com</a>.</p>
+<p class="fb-note">Written up by Eyal Levin, October 2026.</p>
+
+<script type="module">
+// Demo data: ages in hours, set relative to the reader's clock so the page never goes stale.
+const ITEMS = [
+  ['Release notes for version 4.2', 0.4], ['How we cut our cloud bill in half', 9], ['A short history of the hyperlink', 30],
+  ['Notes from the design meetup', 100], ['Why we moved off the old CMS', 400], ['Accessibility audit, part one', 1500],
+  ['The 2025 reading list', 6000], ['Our first post', 15000],
+];
+const base = Date.now(), H = 3600000, iso = (h) => new Date(base - h * H).toISOString();
+const short = (h) => new Date(base - h * H).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: h > 4000 ? 'numeric' : undefined });
+const plain = document.querySelector('[data-list="plain"]'), fresh = document.querySelector('[data-list="fresh"]');
+plain.innerHTML = ITEMS.map(([t, h]) => `<li><span class="t">${t}</span><span class="d">${short(h)}</span></li>`).join('');
+fresh.innerHTML = ITEMS.map(([t, h]) => `<li><span class="t">${t}</span><fresh-bar datetime="${iso(h)}"></fresh-bar></li>`).join('');
+document.querySelectorAll('[data-ago]').forEach((el) => el.setAttribute('datetime', iso(+el.dataset.ago)));
+document.getElementById('fb-big').setAttribute('datetime', iso(24 * 14));
+
+// The clock: move "now" forward up to two years and watch the list age.
+const t = document.getElementById('fb-t'), out = document.getElementById('fb-to');
+const span = (v) => v === 0 ? 0 : Math.expm1((v / 1000) * Math.log1p(17532)); // hours, log so the first days get room
+const words = (h) => h < 1 ? 'today' : h < 48 ? `+${Math.round(h)} hours` : h < 24 * 60 ? `+${Math.round(h / 24)} days` : h < 24 * 700 ? `+${Math.round(h / 730.5)} months` : `+${(h / 8766).toFixed(1)} years`;
+t.addEventListener('input', () => {
+  const h = span(+t.value), now = new Date(base + h * H).toISOString();
+  out.textContent = words(h);
+  fresh.querySelectorAll('fresh-bar').forEach((b) => h ? b.setAttribute('now', now) : b.removeAttribute('now'));
+});
+</script>

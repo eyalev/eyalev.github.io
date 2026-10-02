@@ -19,3 +19,14 @@ A personal portfolio page with no server of its own.
 - observability: GitHub Pages, no Worker to observe
 - check-390: static content pages, no interactive UI to verify
 - 404: GitHub Pages default 404
+
+## /freshbar/
+
+`freshbar/` is the freshbar concept page (`index.html`) and its drop-in web
+component (`fresh-bar.js`, MIT, no dependencies, loaded from
+`https://eyalev.com/freshbar/fresh-bar.js` by other sites, so keep its URL and its
+exports stable). Tests: `node freshbar/test.mjs`. Page styles are inline and use
+only the site's tokens. Same baseline as the rest of the site (static, no
+analytics, feedback via hello@eyalev.com). Exploration lab:
+https://freshbar.kapps.dev (Access). House notes: `~/.claude/docs/freshbar.md`.
+
