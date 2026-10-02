@@ -5,11 +5,11 @@ home: true
 {% assign count = 0 %}{% for g in site.data.projects %}{% assign count = count | plus: g.items.size %}{% endfor %}
 <section class="hello">
   <h1 class="hello-name">Eyal Levin</h1>
-  <p class="hello-line">Software developer near Lisbon. I build things that gather scattered information and keep it attributed, and tooling for AI coding agents.</p>
+  <p class="hello-line">Product engineer near Lisbon. I build things and ship them.</p>
 </section>
 
 <nav class="index" aria-label="Pages">
-  <a href="/projects/"><span class="index-name">Projects</span><span class="index-note">{{ count }} things I've built</span></a>
+  <a href="/projects/"><span class="index-name">Projects</span><span class="index-note">{{ count }} so far, most of them live</span></a>
   <a href="/about/"><span class="index-name">About</span><span class="index-note">Background and work</span></a>
   <a href="mailto:hello@eyalev.com"><span class="index-name">Email</span><span class="index-note">hello@eyalev.com</span></a>
   <a href="https://github.com/eyalev"><span class="index-name">GitHub</span><span class="index-note">eyalev</span></a>
