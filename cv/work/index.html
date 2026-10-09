@@ -22,13 +22,13 @@ description: Four of Eyal Levin's projects for hiring teams, with what each one 
   </ul>
 </section>
 
-<section class="group" id="lingush">
-  <h2><a href="https://lingush.com">Lingush</a> <span class="count">full-stack product</span></h2>
-  <p>Native Portuguese podcasts as listening practice: real audio, word-by-word translation, and sentence-by-sentence playback at full speed.</p>
+<section class="group" id="how-to-learn">
+  <h2><a href="https://howtolearn.app">How to Learn</a> <span class="count">content + data</span></h2>
+  <p>A curated, filterable directory of the best resources for learning a language, plus explainers on how learning works. The most visited of my sites.</p>
   <ul class="projects">
-    <li><span class="p-name">How it works</span><p class="p-desc">A Next.js and React app on Postgres through Prisma, with sign-in, Stripe payments and Sentry, plus an Android build with Capacitor. Behind it, a Python audio pipeline transcribes episodes, splits them into sentences, translates and adds speech.</p></li>
-    <li><span class="p-name">What it shows</span><p class="p-desc">The whole product on one person: the data model, the pipeline, the UI, payments and the Android build.</p></li>
-    <li><span class="p-name">Stack</span><p class="p-desc">TypeScript, React, Next.js, Postgres, Prisma, Stripe, Python, Capacitor.</p></li>
+    <li><span class="p-name">How it works</span><p class="p-desc">The content is structured JSON with a written schema for each layer: resources, methods, the science of learning, skill paths. A static site is generated from it, with a wizard and a page per language.</p></li>
+    <li><span class="p-name">What was hard</span><p class="p-desc">Keeping a content site honest as it grows. Every claim about learning carries a paper and an evidence rating, and test scripts refuse to ship a study whose source cannot be opened, a quote that does not resolve to its source, or a link built from anything but a permanent id.</p></li>
+    <li><span class="p-name">Stack</span><p class="p-desc">Astro, Cloudflare Workers, JSON schemas enforced by tests.</p></li>
   </ul>
 </section>
 
