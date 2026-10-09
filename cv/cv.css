@@ -1,0 +1,4 @@
+/* /cv section only. Tokens from /assets/style.css (see DESIGN.md). */
+.jump a[aria-current] { color: var(--text); text-decoration-color: var(--accent); }
+.jump { margin-bottom: var(--s5); }
+.group > p { color: var(--soft); max-width: 36em; }

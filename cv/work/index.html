@@ -1,0 +1,53 @@
+---
+layout: default
+title: Selected work
+section: cv
+permalink: /cv/work/
+description: Four of Eyal Levin's projects for hiring teams, with what each one does, how it is built and what was hard.
+---
+<link rel="stylesheet" href="/cv/cv.css">
+<h1>Selected work</h1>
+<nav class="jump" aria-label="CV pages">
+  <a href="/cv/">Overview</a><a href="/cv/experience/">Experience</a><a href="/cv/work/" aria-current="page">Selected work</a><a href="/cv/eyal-levin-cv.pdf">CV as PDF</a>
+</nav>
+<p class="lede">Four projects, chosen to show different things. All built and run by me, all live. The full list of {% assign count = 0 %}{% for g in site.data.projects %}{% assign count = count | plus: g.items.size %}{% endfor %}{{ count }} is on the <a href="/projects/">projects page</a>.</p>
+
+<section class="group" id="niuz">
+  <h2><a href="https://niuz.app">niuz</a> <span class="count">data pipeline + LLMs</span></h2>
+  <p>News from Portugal, Israel and the world, reduced to single statements, each carrying the source's exact words. A statement is confirmed when two independent outlets carry it.</p>
+  <ul class="projects">
+    <li><span class="p-name">How it works</span><p class="p-desc">One adapter per kind of source (RSS articles, podcasts) turns everything into the same shape. Podcasts run as a workflow per episode: transcription over byte-range slices, transcript to object storage. A model proposes statements with a quote, and code keeps only those whose quote really is in the source. Embeddings match statements across outlets, with a model judge for the uncertain band, which also catches contradictions.</p></li>
+    <li><span class="p-name">What was hard</span><p class="p-desc">Not letting the model invent anything. Summaries keep only sentences that cite a real statement. The Hebrew and Portuguese editions are translations of the checked English page, rejected if any number changes. Every paid model call sits under a daily budget.</p></li>
+    <li><span class="p-name">Stack</span><p class="p-desc">Cloudflare Workers, D1, Vectorize, Workers AI, Workflows, R2.</p></li>
+  </ul>
+</section>
+
+<section class="group" id="lingush">
+  <h2><a href="https://lingush.com">Lingush</a> <span class="count">full-stack product</span></h2>
+  <p>Native Portuguese podcasts as listening practice: real audio, word-by-word translation, and sentence-by-sentence playback at full speed.</p>
+  <ul class="projects">
+    <li><span class="p-name">How it works</span><p class="p-desc">A Next.js and React app on Postgres through Prisma, with sign-in, Stripe payments and Sentry, plus an Android build with Capacitor. Behind it, a Python audio pipeline transcribes episodes, splits them into sentences, translates and adds speech.</p></li>
+    <li><span class="p-name">What it shows</span><p class="p-desc">The whole product on one person: the data model, the pipeline, the UI, payments and the Android build.</p></li>
+    <li><span class="p-name">Stack</span><p class="p-desc">TypeScript, React, Next.js, Postgres, Prisma, Stripe, Python, Capacitor.</p></li>
+  </ul>
+</section>
+
+<section class="group" id="jarvis-arena">
+  <h2><a href="https://jarvis-arena.kapps.dev">Jarvis Arena</a> <span class="count">voice agents</span></h2>
+  <p>Runs a scripted conversation against a voice agent and returns a video of it, a pass or miss for every step, and what it cost.</p>
+  <ul class="projects">
+    <li><span class="p-name">How it works</span><p class="p-desc">A synthetic voice says each line, the agent hears it through real speech-to-text (so mishearings are real), then acts in a real Chromium window and answers out loud. Checks run after each line. The whole screen is recorded with both voices and stored next to the transcript and the cost.</p></li>
+    <li><span class="p-name">What it shows</span><p class="p-desc">Testing an AI product the way a user meets it, end to end, with numbers instead of impressions. Everything runs in one Cloudflare account: a Worker, one container per run, D1, R2. <a href="https://github.com/eyalev/jarvis-arena">Open source</a>.</p></li>
+    <li><span class="p-name">Stack</span><p class="p-desc">Cloudflare Workers, Containers, D1, R2, Workers AI, speech APIs.</p></li>
+  </ul>
+</section>
+
+<section class="group" id="podqast">
+  <h2><a href="https://podqast.app">podqast</a> <span class="count">phone-first web app</span></h2>
+  <p>Every episode of 550 podcasts in 29 languages, searchable by subject and by who is on them, with a player that keeps going while you browse.</p>
+  <ul class="projects">
+    <li><span class="p-name">How it works</span><p class="p-desc">Plain RSS into a database on a schedule. One HTML page, one script, one stylesheet: no framework and no runtime dependencies. Resume where you left off, speed, lock-screen controls, installable on a phone.</p></li>
+    <li><span class="p-name">What it shows</span><p class="p-desc">Keeping something small and fast on purpose, and running it in public: real crawler traffic, query costs bounded by indexes and caching, decisions taken from what visitors actually do.</p></li>
+    <li><span class="p-name">Stack</span><p class="p-desc">Cloudflare Workers, D1, vanilla JavaScript, Media Session API.</p></li>
+  </ul>
+</section>
