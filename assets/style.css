@@ -158,6 +158,8 @@ footer.site a { color: var(--dim); text-decoration: none; padding: var(--s2) 0; 
 .group h2 { display: flex; align-items: baseline; gap: var(--s3); padding-bottom: var(--s3); border-bottom: 1px solid var(--text); }
 .count { font-family: var(--sans); font-size: 14px; letter-spacing: 0; color: var(--dim); font-variant-numeric: tabular-nums; }
 
+.tier-note { margin: 0; padding: var(--s3) 0 var(--s1); font-size: 15px; color: var(--dim); max-width: 36em; }
+
 .projects { list-style: none; margin: 0; padding: 0; }
 .projects li {
   display: grid;

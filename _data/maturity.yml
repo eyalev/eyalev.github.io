@@ -1,0 +1,17 @@
+# Tiers for /projects/, most mature first. Each project in projects.yml has
+# `maturity` (5..1) and `rank` (order across the whole list).
+- level: 5
+  name: Mature
+  note: The most used and the most built out. People come back to these every day.
+- level: 4
+  name: Established
+  note: Built out, tested and in use. Younger or quieter than the ones above.
+- level: 3
+  name: Working
+  note: Live and solid, still finding the people they are for.
+- level: 2
+  name: Early
+  note: Shipped recently, or small and stable.
+- level: 1
+  name: Experiments
+  note: Prototypes and one-off tools, kept up for reference.

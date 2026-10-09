@@ -30,3 +30,14 @@ only the site's tokens. Same baseline as the rest of the site (static, no
 analytics, feedback via hello@eyalev.com). Exploration lab:
 https://freshbar.kapps.dev (Access). House notes: `~/.claude/docs/freshbar.md`.
 
+
+## /projects/
+
+`/projects/` is ordered by **maturity**, not topic (Eyal, 2026-10-09). Every
+item in `_data/projects.yml` carries `maturity` (5 Mature, 4 Established,
+3 Working, 2 Early, 1 Experiments; tier names and notes in
+`_data/maturity.yml`) and `rank` (order across the whole list). The topic
+`group`s stay in the data but are not rendered. When you add a project, give it
+both fields; scores came from real visitor sessions (`learn sites`), commits,
+tests, age and activity. Inactive projects come off the list (Lingush, removed
+2026-10-09).
