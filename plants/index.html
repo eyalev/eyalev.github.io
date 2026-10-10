@@ -1,0 +1,35 @@
+---
+layout: default
+title: Plants
+permalink: /plants/
+noindex: true
+description: Two ways to draw each project, side by side. Not linked from the site.
+---
+{% assign all = "" | split: "" %}{% for g in site.data.projects %}{% assign all = all | concat: g.items %}{% endfor %}{% assign all = all | sort: "rank" %}
+<h1>Plants</h1>
+<p class="lede">Two ways to draw each project. Left: the plant on its own, as on the projects page. Right: plant and plant, the same plant growing out of a factory that grows with it, from a sprout under a glass dome to a plant-factory with a conveyor.</p>
+
+{% for t in site.data.maturity %}
+{% assign tier = all | where_exp: "p", "p.maturity == t.level" %}
+{% if tier.size > 0 %}
+<section class="group">
+  <h2>{{ t.name }} <span class="count">{{ tier.size }}</span></h2>
+  <ul class="pair-list">
+    {% for p in tier %}
+    <li>
+      <span class="pair">{% include plants/{{ p.plant }}.svg %}{% include plantworks/{{ p.plant }}.svg %}</span>
+      <span class="pair-name">{{ p.name }}</span>
+      <span class="pair-note">{{ p.plant_label }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endfor %}
+<style>
+.pair-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--s5) var(--s4); padding-top: var(--s4); }
+.pair { display: flex; gap: var(--s1); }
+.pair svg { width: 50%; height: auto; aspect-ratio: 1; }
+.pair-name { display: block; font-family: var(--serif); font-size: 19px; margin-top: var(--s2); }
+.pair-note { display: block; font-size: 13px; color: var(--dim); line-height: 1.4; }
+</style>

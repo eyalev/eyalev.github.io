@@ -52,3 +52,10 @@ plant is chosen for what the project is; its size and stage follow `maturity`
 (1 sprout ... 5 full grown). When a project's maturity changes, redraw its plant
 at the new stage; when you add a project, give it a new plant. Run
 `python3 scripts/plants.py` after editing; `scripts/` is excluded from the build.
+
+### Plantworks (experiment, 2026-10-10)
+
+`scripts/plantworks.py` draws a second set, `_includes/plantworks/<id>.svg`: the
+same plant growing out of a factory ("plant" and "plant") whose size follows
+maturity. Compared with the plain set on the unlinked, noindex page `/plants/`.
+Not used on `/projects/` unless Eyal picks it. Colours `--p-glass`, `--p-lit`.
