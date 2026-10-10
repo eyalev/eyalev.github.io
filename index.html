@@ -16,13 +16,3 @@ home: true
   <a href="https://www.linkedin.com/in/eyalev/"><span class="index-name">LinkedIn</span><span class="index-note">in/eyalev</span></a>
 </nav>
 
-<p class="clock">Open to remote work, part time or full time. It's <time id="lisbon-time">daytime</time> in Lisbon.</p>
-<script>
-  (function () {
-    var el = document.getElementById('lisbon-time');
-    function tick() {
-      el.textContent = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Lisbon' }).format(new Date());
-    }
-    tick(); setInterval(tick, 30000);
-  })();
-</script>

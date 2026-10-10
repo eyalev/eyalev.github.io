@@ -160,9 +160,6 @@ footer.site a { color: var(--dim); text-decoration: none; padding: var(--s2) 0; 
   .index a:hover .index-note { color: var(--text); }
 }
 
-.clock { margin-top: var(--s6); font-size: 14px; color: var(--dim); }
-.clock time { font-variant-numeric: tabular-nums; color: var(--text); }
-
 /* ---- projects ---- */
 
 .lede { font-size: 18px; color: var(--soft); margin-bottom: var(--s5); }
