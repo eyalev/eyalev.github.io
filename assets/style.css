@@ -9,6 +9,19 @@
   --wash:    #f3f3ef;
   --accent:  #b4441a;
 
+  /* Botanical palette: the project plants on /projects/ only (DESIGN.md). */
+  --p-leaf:   #5f8a4a;
+  --p-deep:   #3f6532;
+  --p-pale:   #9fbc8c;
+  --p-stem:   #8a7258;
+  --p-bark:   #6b5440;
+  --p-gold:   #dfa630;
+  --p-rose:   #d98a7c;
+  --p-violet: #8576bd;
+  --p-fruit:  #c2462b;
+  --p-root:   #d9792c;
+  --p-white:  #ffffff;
+
   --serif: "Newsreader", Georgia, serif;
   --sans:  "Geist", "Helvetica Neue", Arial, sans-serif;
 
@@ -26,11 +39,15 @@
     --rule:   #262624;
     --wash:   #1b1b19;
     --accent: #ee8f5f;
+    --p-leaf: #7fae67; --p-deep: #5e8a4c; --p-pale: #a9c697; --p-stem: #ab9476; --p-bark: #a2876d;
+    --p-gold: #e8b955; --p-rose: #e6a396; --p-violet: #a597dc; --p-fruit: #ea7a5c; --p-root: #e8944f; --p-white: #e9e6dc;
   }
 }
 :root[data-theme="dark"] {
   --bg: #121211; --text: #ecece6; --soft: #c9c9c2; --dim: #8e8e87;
   --faint: #5f5f5a; --rule: #262624; --wash: #1b1b19; --accent: #ee8f5f;
+  --p-leaf: #7fae67; --p-deep: #5e8a4c; --p-pale: #a9c697; --p-stem: #ab9476; --p-bark: #a2876d;
+  --p-gold: #e8b955; --p-rose: #e6a396; --p-violet: #a597dc; --p-fruit: #ea7a5c; --p-root: #e8944f; --p-white: #e9e6dc;
 }
 
 * { box-sizing: border-box; }
@@ -177,6 +194,10 @@ footer.site a { color: var(--dim); text-decoration: none; padding: var(--s2) 0; 
   overflow-wrap: anywhere;
 }
 .p-meta { font-size: 13px; color: var(--dim); white-space: nowrap; }
+.projects li.planted { grid-template-columns: 56px 1fr auto; column-gap: var(--s4); }
+.p-plant { grid-row: 1 / span 2; align-self: start; width: 56px; height: 56px; margin-top: calc(-1 * var(--s1)); }
+.p-plant svg { display: block; width: 100%; height: 100%; }
+.planted .p-desc { grid-column: 2 / -1; }
 .p-desc { grid-column: 1 / -1; margin: 0; font-size: 15px; line-height: 1.55; color: var(--dim); max-width: 36em; }
 
 /* ---- about / prose ---- */
@@ -194,6 +215,8 @@ pre { overflow-x: auto; padding: var(--s3) var(--s4); background: var(--wash); }
 img { max-width: 100%; height: auto; }
 
 @media (max-width: 560px) {
+  .projects li.planted { grid-template-columns: 48px 1fr auto; column-gap: var(--s3); }
+  .p-plant { width: 48px; height: 48px; }
   h1 { font-size: 38px; }
   header.site { padding: var(--s5) 0 var(--s7); }
   .index-name { font-size: 30px; }

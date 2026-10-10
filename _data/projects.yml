@@ -5,48 +5,64 @@
       meta: web app
       maturity: 4
       rank: 3
+      plant: lotus
+      plant_label: "A water lily, flowering"
       desc: A public belief journal. What people currently believe, when they said it, and what changed their minds.
     - name: ppll
       url: https://ppll.app
       meta: web app
       maturity: 4
       rank: 4
+      plant: bamboo
+      plant_label: "A stand of bamboo"
       desc: One page per public figure. Where they actually publish, and what they are on record saying, in their own words.
     - name: rcmnd
       url: https://rcmnd.app
       meta: web app
       maturity: 3
       rank: 8
+      plant: strawberry
+      plant_label: "A strawberry with its first berry"
       desc: Books, tools and hardware recommended by named people, every entry traced back to the public post where they said it.
     - name: niuz
       url: https://niuz.app
       meta: web app
       maturity: 3
       rank: 7
+      plant: wheat
+      plant_label: "Young wheat, the heads still green"
       desc: The news reduced to the points that matter, and which outlets report each one.
     - name: wiqqi
       url: https://wiqqi.app
       meta: web app
       maturity: 2
       rank: 12
+      plant: ivy
+      plant_label: "Ivy, starting to spread"
       desc: A wiki of organizations, podcasts, people and events. What each one is, who is behind it, and where every fact comes from.
     - name: ybooks
       url: https://ybooks.app
       meta: web app
       maturity: 2
       rank: 15
+      plant: apple
+      plant_label: "An apple sapling with one blossom"
       desc: The case for reading books. The evidence with its caveats, quotes from notable readers, and what named people are reading now.
     - name: reachdex
       url: https://reachdex.kapps.dev
       meta: web app
       maturity: 2
       rank: 19
+      plant: morningglory
+      plant_label: "A morning glory finding its stick"
       desc: A curated index of how to actually reach people, organizations and projects, and which of their channels are dead.
     - name: whosaid
       url: https://whosaid.kapps.dev
       meta: web app
       maturity: 1
       rank: 26
+      plant: bluebell
+      plant_label: "A bluebell sprout"
       desc: Speaker-attributed transcripts of podcasts and interviews, with timestamps.
 
 - group: Places
@@ -56,36 +72,48 @@
       meta: web app
       maturity: 2
       rank: 16
+      plant: pine
+      plant_label: "A pine seedling"
       desc: Every town on earth, one page each. 34,000 places with their weather, air quality, events and what is nearby.
     - name: Agenda PT
       url: https://agenda.kapps.dev
       meta: web app
       maturity: 2
       rank: 17
+      plant: poppy
+      plant_label: "A poppy, its first flower out"
       desc: Every event in Portugal, searchable by date, category, city and map.
     - name: airhome
       url: https://airhome.kapps.dev
       meta: web app
       maturity: 2
       rank: 18
+      plant: snakeplant
+      plant_label: "A young snake plant"
       desc: Type a Portuguese address and see what you would be breathing there, from the nearest official monitors.
     - name: produqt
       url: https://produqt.app
       meta: web app
       maturity: 2
       rank: 11
+      plant: tomato
+      plant_label: "A tomato seedling"
       desc: The same product at Continente and Auchan, matched by barcode, with the nearest store of each chain.
     - name: Prayer times
       url: https://prayertimes.kapps.dev
       meta: web app
       maturity: 1
       rank: 25
+      plant: datepalm
+      plant_label: "A date palm sprouting from its seed"
       desc: Prayer times for any city, without ads. The calculation method always shown, Qibla direction and a month table.
     - name: Ping
       url: https://ping.kapps.dev
       meta: web app
       maturity: 1
       rank: 28
+      plant: radish
+      plant_label: "A radish sprout"
       desc: Type a city, see whether it is a reasonable hour to message someone there.
 
 - group: Listening
@@ -95,24 +123,32 @@
       meta: web app
       maturity: 4
       rank: 5
+      plant: pea
+      plant_label: "A pea vine with its first pods"
       desc: Every episode of 550 podcasts in 29 languages, searchable by subject and by who is on them, with English notes under the originals.
     - name: Global Radio
       url: https://globalradio.app
       meta: web app
       maturity: 5
       rank: 2
+      plant: sunflower
+      plant_label: "A sunflower in full bloom"
       desc: Eleven thousand live radio stations from 172 countries. Free, no signup.
     - name: Audiobooks
       url: https://audiobooks.kapps.dev
       meta: web app
       maturity: 1
       rank: 23
+      plant: fern
+      plant_label: "A fern frond, still curled"
       desc: Public-domain audiobooks from LibriVox, without the ads. Pick a book and press play.
     - name: Sleep sounds
       url: https://sleepsounds.kapps.dev
       meta: web app
       maturity: 1
       rank: 24
+      plant: lavender
+      plant_label: "A lavender sprig, first bud"
       desc: Rain, ocean, fire and noise. Mix them, set a timer, and it keeps playing with the screen off.
 
 - group: Language learning
@@ -122,18 +158,24 @@
       meta: web app
       maturity: 5
       rank: 1
+      plant: olive
+      plant_label: "An olive tree, bearing fruit"
       desc: A filterable directory of the best resources for learning any language. Apps, podcasts, channels, courses, books and communities.
     - name: pt-variant
       url: https://github.com/eyalev/pt-variant
       meta: Python
       maturity: 1
       rank: 27
+      plant: acorn
+      plant_label: "A cork oak acorn, just sprouted"
       desc: Tells you if a YouTube video is European or Brazilian Portuguese, from the transcript. CLI, web app and API.
     - name: language-learning-resources
       url: https://github.com/eyalev/language-learning-resources
       meta: open data
       maturity: 2
       rank: 22
+      plant: carrot
+      plant_label: "A carrot, most of it underground"
       desc: 800+ resources across 30+ languages as JSON and CSV, with honest notes on each one.
 
 - group: Tools
@@ -143,24 +185,32 @@
       meta: web app
       maturity: 3
       rank: 9
+      plant: bonsai
+      plant_label: "A young bonsai, still being shaped"
       desc: Practise coding interviews out loud. You describe the code, an AI interviewer writes exactly what you said and asks follow-ups.
     - name: Readable PDF
       url: https://pdf.kapps.dev
       meta: web app
       maturity: 1
       rank: 29
+      plant: papyrus
+      plant_label: "A papyrus shoot"
       desc: Turn any PDF into a clean web page you can actually read.
     - name: WishWiki
       url: https://wishwiki.com
       meta: web app
       maturity: 2
       rank: 14
+      plant: dandelion
+      plant_label: "A dandelion gone to seed"
       desc: A wiki where pages come into existence when you wish for them.
     - name: gitbox
       url: https://github.com/eyalev/gitbox
       meta: Rust
       maturity: 1
       rank: 30
+      plant: bean
+      plant_label: "A bean sprout in a box"
       desc: Sync files between computers with git and GitHub, without thinking about git.
 
 - group: Agent tooling
@@ -170,30 +220,40 @@
       meta: Rust
       maturity: 4
       rank: 6
+      plant: cactus
+      plant_label: "A cactus in flower"
       desc: Watch tmux sessions from a browser. Sends a cell grid instead of running a terminal emulator client side, which is what makes it work on a phone.
     - name: mobile-cc
       url: https://github.com/eyalev/mobile-cc
       meta: Rust
       maturity: 3
       rank: 10
+      plant: succulent
+      plant_label: "A succulent in a small pot"
       desc: The same idea packaged for one job, driving Claude Code from a phone.
     - name: herdr-web
       url: https://github.com/eyalev/herdr-web
       meta: TypeScript
       maturity: 2
       rank: 13
+      plant: clover
+      plant_label: "A patch of clover"
       desc: Mobile web UI for the herdr agent multiplexer. Agent state at a glance, so you notice the one waiting on you.
     - name: cc-usage-json
       url: https://github.com/eyalev/cc-usage-json
       meta: Rust
       maturity: 2
       rank: 20
+      plant: mint
+      plant_label: "A sprig of mint"
       desc: Claude Code usage as JSON you can script against, either over OAuth or by scraping the TUI.
     - name: claude-code-manager
       url: https://github.com/eyalev/claude-code-manager
       meta: Rust
       maturity: 1
       rank: 31
+      plant: seed
+      plant_label: "A seed, just germinating"
       desc: Manage Claude Code sessions through tmux. Send messages, detect when a run is done.
 
 - group: Other
@@ -203,4 +263,6 @@
       meta: list
       maturity: 2
       rank: 21
+      plant: daisy
+      plant_label: "A pair of daisies"
       desc: Reading lists from people worth reading. Bookshelves instead of an algorithm.

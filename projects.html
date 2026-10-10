@@ -7,7 +7,7 @@ description: Things Eyal Levin has built, most mature first. Sourced-information
 ---
 {% assign all = "" | split: "" %}{% for g in site.data.projects %}{% assign all = all | concat: g.items %}{% endfor %}{% assign all = all | sort: "rank" %}
 <h1>Projects</h1>
-<p class="lede">{{ all.size }} things, most mature first. The web apps are free and work on a phone.</p>
+<p class="lede">{{ all.size }} things, most mature first, each drawn as a plant at its stage of growth. The web apps are free and work on a phone.</p>
 
 <nav class="jump" aria-label="Maturity">
   {% for t in site.data.maturity %}{% assign n = all | where_exp: "p", "p.maturity == t.level" %}{% if n.size > 0 %}<a href="#{{ t.name | slugify }}">{{ t.name }}</a>{% endif %}{% endfor %}
@@ -21,7 +21,8 @@ description: Things Eyal Levin has built, most mature first. Sourced-information
   <p class="tier-note">{{ t.note }}</p>
   <ul class="projects">
     {% for p in tier %}
-    <li>
+    <li class="planted">
+      <span class="p-plant" title="{{ p.plant_label }}">{% include plants/{{ p.plant }}.svg %}</span>
       <a class="p-name" href="{{ p.url }}">{{ p.name }}</a>
       <span class="p-meta">{{ p.meta }}</span>
       <p class="p-desc">{{ p.desc }}</p>

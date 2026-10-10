@@ -15,6 +15,7 @@ exclude:
   - DESIGN.md
   - Gemfile
   - Gemfile.lock
+  - scripts
 
 sass:
   style: compressed
