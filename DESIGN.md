@@ -2,7 +2,7 @@
 
 Text-first personal site. One column, white page, a serif for names and a sans for reading.
 
-- **Type pair:** Newsreader (names, headings; 19–76 px, weight 400, tight tracking) + Geist (everything else; 13–18 px). No monospace, no all-caps.
+- **Type pair:** Newsreader (names, headings; 19–76 px, weight 400, tight tracking) + Geist (everything else; 13–18 px; 400 body, 500 UI, 600 for bold key sentences in posts). No monospace, no all-caps.
 - **Greys:** `--text #161615`, `--soft #3d3d3a`, `--dim #73736d`, `--faint #a3a39c`, `--rule #e6e6e1`, `--wash #f3f3ef`, page `#ffffff`. Dark mode mirrors them on `#121211`.
 - **Accent:** one, `--accent #b4441a` (dark `#ee8f5f`). Used for hover/press and the current nav underline only.
 - **Botanical palette (project plants only):** `--p-leaf #5f8a4a`, `--p-deep #3f6532`, `--p-pale #9fbc8c`, `--p-stem #8a7258`, `--p-bark #6b5440`, `--p-gold #dfa630`, `--p-rose #d98a7c`, `--p-violet #8576bd`, `--p-fruit #c2462b`, `--p-root #d9792c`, `--p-white #ffffff`, each with a dark-mode value. Used only inside the plant drawings on `/projects/`; never for text, links or UI.

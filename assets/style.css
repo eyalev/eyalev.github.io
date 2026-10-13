@@ -79,6 +79,7 @@ a { color: inherit; text-decoration: underline; text-decoration-color: var(--fai
 @media (hover: hover) { a:hover { color: var(--accent); text-decoration-color: currentColor; } }
 
 p { margin: 0 0 var(--s4); }
+strong, b { font-weight: 600; }
 
 h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.015em; text-wrap: balance; }
 h1 { font-size: 44px; line-height: 1.05; margin: 0 0 var(--s4); }
