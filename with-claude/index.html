@@ -1,0 +1,20 @@
+---
+layout: default
+title: With Claude
+permalink: /with-claude/
+noindex: true
+description: Posts Eyal writes together with Claude Code. The ideas are his; the research and drafting are shared.
+---
+<h1>With Claude</h1>
+<p class="lede">Posts written together with Claude Code, an AI agent. The idea comes from me, usually spoken out loud; Claude reads what others have found and drafts it, and we go back and forth until it says one thing clearly.</p>
+
+<ul class="projects">
+  {% assign posts = site.with_claude | sort: "date" | reverse %}
+  {% for p in posts %}
+  <li>
+    <a class="p-name" href="{{ p.url }}">{{ p.title }}</a>
+    <span class="p-meta">{{ p.date | date: "%b %-d, %Y" }}</span>
+    {% if p.description %}<p class="p-desc">{{ p.description }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

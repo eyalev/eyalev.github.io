@@ -59,3 +59,12 @@ at the new stage; when you add a project, give it a new plant. Run
 same plant growing out of a factory ("plant" and "plant") whose size follows
 maturity. Compared with the plain set on the unlinked, noindex page `/plants/`.
 Not used on `/projects/` unless Eyal picks it. Colours `--p-glass`, `--p-lit`.
+
+## /with-claude/
+
+Posts Eyal and Claude Code write together (Eyal, 2026-10-13): the idea is his, the
+research and drafting are the agent's. Collection `_with_claude/` (config
+`collections.with_claude`), index `with-claude/index.html`. Not in the nav and
+`noindex: true` until Eyal decides to link it. Each post sets `byline:` saying who
+did what; `_layouts/post.html` renders it under the date. Write tight: draft, then
+cut every sentence the point survives without. No em dashes.

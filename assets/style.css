@@ -208,6 +208,8 @@ footer.site a { color: var(--dim); text-decoration: none; padding: var(--s2) 0; 
 .closing { margin-top: var(--s7); color: var(--soft); }
 
 article .date { font-size: 14px; color: var(--dim); display: block; margin-bottom: var(--s6); }
+article .date:has(+ .byline) { margin-bottom: var(--s1); }
+article .byline { font-size: 14px; color: var(--dim); margin-bottom: var(--s6); max-width: 36em; }
 blockquote { margin: var(--s5) 0; padding-left: var(--s4); border-left: 1px solid var(--rule); color: var(--dim); }
 code { font-size: 0.9em; }
 pre { overflow-x: auto; padding: var(--s3) var(--s4); background: var(--wash); }

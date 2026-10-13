@@ -6,6 +6,12 @@ email: hello@eyalev.com
 
 permalink: /writing/:title/
 
+# Posts written together with an AI agent (Claude Code). Unlinked from the nav for now.
+collections:
+  with_claude:
+    output: true
+    permalink: /with-claude/:name/
+
 plugins:
   - jekyll-feed
 
