@@ -11,7 +11,7 @@ noindex: true
 
 Listen to someone talk for three hours and you come away with something no summary gives you: **a sense of how they think.** Read the transcript of the same interview and most of that is gone, even though every word is there.
 
-That is more than a feeling. In 2016 Juliana Schroeder and Nicholas Epley gave people the same words to either read or hear. **Listeners judged the author as more thoughtful and more human.** Readers more often guessed the same sentences came from a machine. Seeing the speaker's face added little; the voice did the work. A follow-up with political opponents put it in its title: speech reveals, and text conceals, a more thoughtful mind.
+That is more than a feeling. In 2016 Juliana Schroeder and Nicholas Epley gave people the same words to either read or hear. **Listeners were more likely to judge that a human, not a computer, was behind the words.** Readers more often guessed the same sentences came from a machine. Seeing the speaker's face added little; the voice did the work. A follow-up with Michael Kardas, using political opponents, put it in its title: speech reveals, and text conceals, a more thoughtful mind.
 
 Part of the reason is that speech is thinking in public. **Writing shows you the conclusions. Speech lets you hear the route**: the pause before an answer, the sentence restarted halfway, the pace that picks up when someone reaches the part they care about, the tone that tells you whether a claim is a certainty or a guess. Michael Kraus at Yale found people read others' feelings at least as well from voice alone as from voice and face together, sometimes better. His guess is that faces are easier to control than voices.
 
