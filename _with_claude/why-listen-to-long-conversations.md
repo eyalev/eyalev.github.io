@@ -4,33 +4,29 @@ title: Why listen to long conversations
 date: 2026-10-13
 redirect_from:
   - /with-claude/what-a-transcript-leaves-out/
-byline: By Eyal and Claude. The idea is Eyal's, from a voice note after a long podcast. Claude Code read what others have found and wrote it up.
-description: What hours of podcasts and long interviews give you that reading doesn't, the evidence behind it, and its limits.
+byline: By Eyal and Claude. The idea is Eyal's, from a voice note after a long podcast. Claude Code wrote it up with him.
+description: What hours of podcasts and long interviews give you that reading doesn't.
 noindex: true
 ---
 
-Listen to someone talk for three hours and you come away with something no summary gives you: **a sense of how they think.** Read the transcript of the same interview and most of that is gone, even though every word is there.
+When you listen to someone talk for a few hours, you learn more than what they think. **You start to get how they think, when they're sure and when they're guessing, and how they work through a question they haven't been asked before.** Reading is still better for facts and for following a hard argument, but for getting to know how a person thinks, a long conversation gives you something writing doesn't.
 
-That is more than a feeling. In 2016 Juliana Schroeder and Nicholas Epley gave people the same words to either read or hear. **Listeners were more likely to judge that a human, not a computer, was behind the words.** Readers more often guessed the same sentences came from a machine. Seeing the speaker's face added little; the voice did the work. A follow-up with Michael Kardas, using political opponents, put it in its title: speech reveals, and text conceals, a more thoughtful mind.
+## The voice
 
-Part of the reason is that speech is thinking in public. **Writing shows you the conclusions. Speech lets you hear the route**: the pause before an answer, the sentence restarted halfway, the pace that picks up when someone reaches the part they care about, the tone that tells you whether a claim is a certainty or a guess. Michael Kraus at Yale found people read others' feelings at least as well from voice alone as from voice and face together, sometimes better. His guess is that faces are easier to control than voices.
+A lot of it is carried by the voice. The pauses, the pace and the tone tell you how confident someone is and where they're improvising, and most of that doesn't make it into writing.
 
-The other part is length. Anyone can give a good twenty minutes. Those answers are rehearsed, polished over a hundred earlier interviews. **Somewhere in the second hour the rehearsed material runs out, and you start hearing the person work things out live.** That is the part worth having.
+## The length
 
-What you pick up there has a name. The philosopher Michael Polanyi called it tacit knowledge: "we know more than we can tell." An expert's judgement, what they notice and what they ignore, mostly doesn't survive being written down, because they can't fully see it themselves. It does pass by exposure. That is how apprenticeship has always worked, and the anthropologist Joseph Henrich argues it is what humans do best: copy people we admire, often without knowing what exactly we copied. **A long conversation is a cheap, partial apprenticeship.** Not Neo downloading kung fu in The Matrix, but closer to it than any summary.
+In the first part of an interview, most guests give answers they've given many times before, polished and safe. **After an hour or two those run out, and you hear the person actually reason**, sometimes changing direction halfway through an answer. That's where you learn how they think.
 
-None of this is new. In Plato's *Phaedrus*, Socrates complains that written words "go on telling you just the same thing forever" and can't answer a question. A podcast can't answer you either, but it lets you listen while someone else asks.
+## What you pick up
 
-Two cautions. The sense of knowing someone from their voice is strong and partly an illusion; researchers have studied this "parasocial" closeness to broadcasters since the 1950s. **Feeling that you understand how someone thinks is not proof that you do.** And reading is faster and better for facts and dense argument; that case has its own page, [Why read books](/with-claude/why-read-books/).
+The philosopher Michael Polanyi called it tacit knowledge: "we know more than we can tell." Much of an expert's judgment is in things they can't write down, and people have always learned it by spending time around someone and absorbing how they work. A long conversation is a small dose of that. Think of Neo downloading kung fu in The Matrix, slowed down to three hours, with a lot less kung fu.
 
-**So if you want what someone knows, read. If you want how they think, listen, and listen long.**
+## Where reading wins
+
+Reading is faster, you set the pace and you can go back, so for facts and dense arguments it's the better tool (more in [Why read books](/with-claude/why-read-books/)).
 
 ## Sources
 
-- Schroeder & Epley, [Mistaking Minds and Machines](https://escholarship.org/uc/item/4904m6bz), *Journal of Experimental Psychology: General*, 2016
-- Schroeder, Kardas & Epley, [The Humanizing Voice](https://newsroom.haas.berkeley.edu/?p=10602), *Psychological Science*, 2017
-- Kraus, [Voice-only communication enhances empathic accuracy](https://insights.som.yale.edu/insights/listeners-glean-emotions-better-from-voice-only-communications), *American Psychologist*, 2017
 - Michael Polanyi, *The Tacit Dimension*, 1966
-- Joseph Henrich, *The Secret of Our Success*, 2015
-- Cedric Chin, [The Tacit Knowledge Series](https://commoncog.com/the-tacit-knowledge-series/), Commoncog
-- Plato, *Phaedrus*, 275d
