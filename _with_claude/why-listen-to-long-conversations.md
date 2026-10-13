@@ -1,13 +1,15 @@
 ---
 layout: post
-title: What a transcript leaves out
+title: Why listen to long conversations
 date: 2026-10-13
+redirect_from:
+  - /with-claude/what-a-transcript-leaves-out/
 byline: By Eyal and Claude. The idea is Eyal's, from a voice note after a long podcast. Claude Code read what others have found and wrote it up.
-description: Why hearing someone talk for hours teaches you how they think, in a way their words on a page don't.
+description: What hours of podcasts and long interviews give you that reading doesn't, the evidence behind it, and its limits.
 noindex: true
 ---
 
-You can read the transcript of a three-hour interview in forty minutes. You get every word, and you still miss the thing that made you want to listen: a sense of how this person thinks.
+Listen to someone talk for three hours and you come away with something no summary gives you: **a sense of how they think.** Read the transcript of the same interview and most of that is gone, even though every word is there.
 
 That is more than a feeling. In 2016 Juliana Schroeder and Nicholas Epley gave people the same words to either read or hear. **Listeners judged the author as more thoughtful and more human.** Readers more often guessed the same sentences came from a machine. Seeing the speaker's face added little; the voice did the work. A follow-up with political opponents put it in its title: speech reveals, and text conceals, a more thoughtful mind.
 
@@ -19,7 +21,7 @@ What you pick up there has a name. The philosopher Michael Polanyi called it tac
 
 None of this is new. In Plato's *Phaedrus*, Socrates complains that written words "go on telling you just the same thing forever" and can't answer a question. A podcast can't answer you either, but it lets you listen while someone else asks.
 
-Two cautions. The sense of knowing someone from their voice is strong and partly an illusion; researchers have studied this "parasocial" closeness to broadcasters since the 1950s. **Feeling that you understand how someone thinks is not proof that you do.** And reading is faster and better for facts and dense argument.
+Two cautions. The sense of knowing someone from their voice is strong and partly an illusion; researchers have studied this "parasocial" closeness to broadcasters since the 1950s. **Feeling that you understand how someone thinks is not proof that you do.** And reading is faster and better for facts and dense argument; that case has its own page, [Why read books](/with-claude/why-read-books/).
 
 **So if you want what someone knows, read. If you want how they think, listen, and listen long.**
 

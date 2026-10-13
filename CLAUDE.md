@@ -68,3 +68,7 @@ research and drafting are the agent's. Collection `_with_claude/` (config
 `noindex: true` until Eyal decides to link it. Each post sets `byline:` saying who
 did what; `_layouts/post.html` renders it under the date. Write tight: draft, then
 cut every sentence the point survives without. No em dashes.
+Posts are meant as linkable "canonical" answers (Why read books / Why listen to
+long conversations) and link to each other. Front-matter `date:` is a plain
+date: a time later than the build time makes Jekyll skip the post silently.
+Renamed posts keep their old URL via `redirect_from` (jekyll-redirect-from).
